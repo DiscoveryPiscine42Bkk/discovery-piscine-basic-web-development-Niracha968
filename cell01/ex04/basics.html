@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basics</title>
+    <style>
+        body {
+            background-color: pink;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .main-title {
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+        .images-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .shop {
+            text-align: center;
+        }
+        .shop img {
+            width: 220px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        hr {
+            margin: 50px 0 30px 0;
+            border: none;
+            border-top: 2px solid #fff;
+            width: 90%;
+        }
+        .copyright {
+            text-align: right;
+            font-style: italic;
+            font-family: "Fira Mono", "Consolas", monospace;
+            color: #fff;
+            margin-right: 30px;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-title">
+        Welcome to Shop&Save!
+    </div>
+    <div class="images-row">
+        <div class="shop">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+            <br>
+            <a href="https://www.amazon.com" target="_blank">Visit Amazon</a>
+        </div>
+        <div class="shop">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Shopee_logo.svg" alt="Shopee">
+            <br>
+            <a href="https://shopee.com" target="_blank">Visit Shopee</a>
+        </div>
+    </div>
+    <hr>
+    <div class="copyright">
+        © Niracha968 2025
+    </div>
+</body>
+</html>
