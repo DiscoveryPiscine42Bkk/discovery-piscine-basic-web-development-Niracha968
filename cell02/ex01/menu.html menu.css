@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SNCF Sandwich Drop-down Menu</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div class="sandwich-menu" tabindex="0">
+        <span class="sandwich-layers" aria-hidden="true">
+            <div class="layer bread"></div>
+            <div class="layer cheese"></div>
+            <div class="layer ham"></div>
+            <div class="layer salad"></div>
+            <div class="layer bread"></div>
+        </span>
+        <button class="sandwich-btn" aria-haspopup="true" aria-expanded="false">
+            SNCF Sandwich
+        </button>
+        <ul class="dropdown-content" role="menu">
+            <li><a href="#">Ham</a></li>
+            <li><a href="#">Cheese</a></li>
+            <li><a href="#">Butter</a></li>
+            <li><a href="#">Baguette</a></li>
+            <li><a href="#">Salad</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+body {
+    background: #f8e1e7;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sandwich-menu {
+    position: relative;
+    display: inline-block;
+    margin-top: 60px;
+}
+.sandwich-btn {
+    background: linear-gradient(90deg, #f7c59f 0%, #fbeee6 100%);
+    color: #7b3f00;
+    padding: 18px 40px 18px 60px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 40px 40px 30px 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(120,60,20,0.12);
+    font-weight: bold;
+    position: relative;
+    transition: background 0.2s;
+}
+.sandwich-btn::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: radial-gradient(circle at 60% 40%, #e6b800 70%, #f7c873 100%);
+    border-radius: 50%;
+    border: 2px solid #d1a000;
+    box-shadow: 0 2px 8px #e6b80044;
+}
+.sandwich-btn:hover, .sandwich-btn:focus {
+    background: linear-gradient(90deg, #fbeee6 0%, #f7c59f 100%);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 220px;
+    background: #fff8e1;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 24px rgba(120,60,20,0.13);
+    z-index: 1;
+    padding: 0;
+    margin-top: 4px;
+    border: 1px solid #f7c59f;
+    overflow: hidden;
+    animation: fadeIn 0.3s;
+}
+.sandwich-menu:hover .dropdown-content,
+.sandwich-menu:focus-within .dropdown-content {
+    display: block;
+}
+.dropdown-content li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown-content a {
+    display: block;
+    padding: 16px 32px;
+    color: #7b3f00;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background 0.2s, color 0.2s;
+    border-bottom: 1px solid #f7c59f;
+}
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+.dropdown-content a:hover {
+    background: #f7c59f;
+    color: #fff;
+}
+/* Sandwich layers for visual effect */
+.sandwich-layers {
+    position: absolute;
+    left: 18px;
+    top: 10px;
+    width: 36px;
+    height: 36px;
+    pointer-events: none;
+    z-index: 2;
+}
+.layer {
+    width: 36px;
+    height: 6px;
+    border-radius: 3px;
+    margin: 3px 0;
+    background: #e6b800;
+    box-shadow: 0 1px 2px #d1a00044;
+}
+.layer.ham { background: #e57373; }
+.layer.cheese { background: #ffe082; }
+.layer.bread { background: #f7c59f; }
+.layer.salad { background: #81c784; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+/* Responsive */
+@media (max-width: 500px) {
+    .sandwich-btn { font-size: 1em; padding: 14px 20px 14px 40px;}
+    .dropdown-content a { padding: 12px 16px; font-size: 1em;}
+    .sandwich-layers, .sandwich-btn::before { width: 24px; height: 24px; left: 10px;}
+    .layer { width: 24px; height: 4px; }
+}
