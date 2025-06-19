@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Niracha968</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Sarabun', Arial, sans-serif;
+      background: linear-gradient(120deg, #f8fafc 0%, #ffe0f0 100%);
+      color: #333;
+    }
+    header {
+      background: #e75480;
+      color: #fff;
+      padding: 40px 0 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 10px 0 0 0;
+      font-size: 1.3em;
+      font-style: italic;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 8px #e7548033;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #e75480;
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px #e7548011;
+      padding: 40px 30px;
+    }
+    .section-title {
+      color: #e75480;
+      font-size: 2em;
+      margin-bottom: 18px;
+      border-left: 6px solid #e75480;
+      padding-left: 12px;
+    }
+    .about {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .project-card {
+      background: #ffe0f0;
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 2px 8px #e7548022;
+      transition: transform 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.03);
+    }
+    .project-card h3 {
+      margin-top: 0;
+      color: #e75480;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .skills-list li {
+      background: #e75480;
+      color: #fff;
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 1em;
+      margin-bottom: 6px;
+    }
+    footer {
+      text-align: center;
+      color: #e75480;
+      font-size: 1em;
+      margin: 40px 0 20px 0;
+      font-family: monospace;
+      font-style: italic;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 18px 6px; }
+      header h1 { font-size: 2em; }
+      .section-title { font-size: 1.3em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>พอร์ตโฟลิโอของ Niracha968 ✨</h1>
+    <p>Web Developer | นักออกแบบเว็บไซต์ | ผู้เรียนรู้ตลอดชีวิต</p>
+  </header>
+  <nav>
+    <a href="#about">เกี่ยวกับฉัน</a>
+    <a href="#projects">ผลงาน</a>
+    <a href="#skills">ทักษะ</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+  <div class="container">
+    <section id="about">
+      <div class="section-title">เกี่ยวกับฉัน</div>
+      <div class="about">
+        สวัสดีค่ะ! ฉันชื่อ Niracha968 เป็นนักพัฒนาเว็บไซต์ที่รักในการสร้างสรรค์และออกแบบเว็บแอปพลิเคชันที่ใช้งานง่ายและสวยงาม มีประสบการณ์ในการทำงานกับ HTML, CSS, JavaScript และเทคโนโลยีเว็บอื่น ๆ พร้อมเรียนรู้สิ่งใหม่ ๆ อยู่เสมอ
+      </div>
+    </section>
+    <section id="projects">
+      <div class="section-title">ผลงาน</div>
+      <div class="projects">
+        <div class="project-card">
+          <h3>My Portfolio Website</h3>
+          <p>เว็บไซต์แนะนำตัวเอง แสดงผลงานและทักษะต่าง ๆ</p>
+        </div>
+        <div class="project-card">
+          <h3>Online Shop Landing Page</h3>
+          <p>หน้าเว็บร้านค้าออนไลน์ ดีไซน์ทันสมัย รองรับมือถือ</p>
+        </div>
+        <div class="project-card">
+          <h3>Responsive Table</h3>
+          <p>ตารางข้อมูลที่ปรับขนาดตามหน้าจอโดยใช้ CSS เท่านั้น</p>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="section-title">ทักษะ</div>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Responsive Design</li>
+        <li>Git & GitHub</li>
+        <li>Figma</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <div class="section-title">ติดต่อ</div>
+      <p>อีเมล: niracha968@email.com<br>
+      GitHub: <a href="https://github.com/Niracha968" target="_blank">Niracha968</a></p>
+    </section>
+  </div>
+  <footer>
+    © Niracha968 2025
+  </footer>
+</body>
+</html>
